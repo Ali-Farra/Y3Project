@@ -1,0 +1,164 @@
+  
+  m {
+    z-index:-1 ;
+    margin: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .tit{
+position: relative;
+    font-family: 'Poppins',sans-serif;
+    font-size: 9em;
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    transform: rotate(-20deg) skew(25deg);
+    animation: animate 5s ease-in-out infinite;
+    z-index: inherit 90;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-image: url("https://media1.thehungryjpeg.com/thumbs2/ori_112091_12a25f4ae1acf7a2fc864f57a5e94547636a840d_15-seamless-light-wood-background-textures.jpg");
+
+}
+@keyframes animate
+{
+    0%,100%{
+        transform: rotate(-20deg) skew(25deg) translate(0.0);
+        text-shadow: 2px 2px #000000;
+
+    }
+    50%{
+        transform: rotate(-20deg) skew(25deg) translate(50px,-50px);
+        text-shadow: -50px 50px 0 rgb(0, 0, 0);
+        /* filter: blur(15px); */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        max-width: 600px;
+
+    }
+    .tit{
+        position: relative;
+            font-family: 'Poppins',sans-serif;
+            font-size: 5em;
+            color:#ffff;
+            text-transform: uppercase;
+            transform: rotate(-20deg) skew(25deg);
+            animation: animate 5s ease-in-out infinite;
+            z-index:0;
+        
+        }
+}
+/* i hate this shit */
+.c{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    display:flex;
+    justify-content: center;
+    /*align-items: center;*/
+    flex-wrap: wrap;
+    min-width: 60vh;
+
+}
+.box_c{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    transition: 0.5s;
+    background: #060c21;
+}
+.box_c:hover{
+    height: 400px;
+}
+.box_c .imgbc{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    padding:10px;
+    box-sizing: border-box;
+}
+.box_c .imgbc img{
+	/*position:fixed;*/
+	max-height: 100%;
+    max-width: 100%;
+    opacity: 0.1;
+    transition: 0.5s;
+
+}
+.box_c:hover .imgbc img{
+    opacity: 1;
+
+}
+.box_c .c_content{
+	position: absolute;
+	bottom: 0;
+	left:10px;
+	right:10px;
+	bottom:10px;
+	height: 90px;
+	background:rgba(0,0,0,0.4); 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	opacity: 0;
+	transition: .5;
+}
+.box_c:hover .c_content{
+	opacity: 1;
+
+}
+.box_c .c_content h2{
+font-size: 20px;
+color: #ffff;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 1px;
+}
+.box_c .c_content h2 span{
+font-size: 14px;
+color: #ffff;
+font-weight: 200;
+
+letter-spacing: 2px;
+}
+.box_c:before{
+	content: "";
+	position:absolute;
+	top: -2px;
+	left:-2px;
+	right: -2px;
+	bottom: -2px;
+	background: #ffff;
+	z-index: -1;
+
+	}
+.box_c:after{
+	content: "";
+	position:absolute;
+	top: -2px;
+	left:-2px;
+	right: -2px;
+	bottom: -2px;
+	background: #ffff;
+	z-index: -2;
+	filter:blur(40px);
+
+	}
+.box_c:before,
+.box_c:after
+{
+	background: linear-gradient(235deg,#772aff,#010615,#2196f3);
+}
+
